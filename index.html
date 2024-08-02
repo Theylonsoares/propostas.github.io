@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propostas | Theylon Soares</title>
+    <title>PEDIDOS | NOME SUA LOJA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
@@ -162,7 +162,7 @@
             .block, .image-block {
                 height: 80px;
                 font-size: 18px;
-            }
+            }}
 
             @media (max-width: 600px) {
             .image-block {
@@ -260,6 +260,46 @@
 
 
 
+
+
+/* Adicionando estilo para o formulário */
+#address-form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre os campos */
+    margin-left: -15%;
+}
+
+.form-group label {
+    width: 120px; /* Largura fixa para labels, ajuste conforme necessário */
+    margin-right: 10px; /* Espaço entre o label e o campo de entrada */
+    text-align: right; /* Alinha o texto à direita do espaço disponível */
+}
+
+.form-group input {
+    flex: 1; /* O campo de entrada ocupa o restante do espaço */
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Adicionando margem inferior às opções dos botões */
+.popup-buttons a {
+    margin-right: 10px; /* Espaço entre os botões */
+}
+
+
+
+
+
+
+
+
     </style>
 </head>
 
@@ -277,9 +317,9 @@
         <a href="#popup4" class="block">SALADAS</a>
         <a href="#popup5" class="block">BEBIDAS</a>
         
+        <a href="#popup6" class="block">NOME E ENDEREÇO</a>
+        <a href="#popup7" class="block">FORMA DE PAGAMENTO</a>
         <!--DESATIVADOS
-        <a href="#popup6" class="block">TESTE2</a>
-        <a href="#popup7" class="block">TESTE3</a>
         <a href="#popup8" class="block">TESTE4</a>
         <a href="#popup9" class="block">TESTE5</a>
         <a href="#popup10" class="block">TESTE6</a>
@@ -300,14 +340,7 @@
     <div class="option">
         <input type="checkbox" id="outra2">
         <label for="outra2"> <strong>*2*</strong></label>
-    </div>
-    <div class="option">
-        <input type="checkbox" id="outra3">
-        <label for="outra3"> <strong>*3*</strong></label>
-    </div>
-    <div class="option">
-        <input type="checkbox" id="outra4">
-        <label for="outra4"> <strong>*4*</strong></label>
+    
     </div>
 </div>
 
@@ -397,13 +430,80 @@
             <div class="option"><input type="checkbox" id="educacao5"><label for="educacao5">Suco de Polpa 500 ml <strong> - R$7,00</strong> </label></div>
             <div class="popup-buttons">
                 <a href="#popup4" class="prev">Anterior</a>
-                <a href="#popup1" class="next">Próximo</a>
+                <a href="#popup6" class="next">Próximo</a>
                 <a href="#finalizarPedido">Finalizar Pedido</a>
             </div>
         </div>
     </div>
     
+    <div id="popup6" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="window.location.href='#'">&times;</span>
+            <h2>NOME E ENDEREÇO</h2>
+            <form id="address-form">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="neighborhood">Bairro:</label>
+                    <input type="text" id="neighborhood" name="neighborhood" required>
+                </div>
+                <div class="form-group">
+                    <label for="street">Rua:</label>
+                    <input type="text" id="street" name="street" required>
+                </div>
+                <div class="popup-buttons">
+                    <a href="#popup5" class="prev">Anterior</a>
+                    <a href="#popup7" class="next">Próximo</a>
+                    <a href="#finalizarPedido">Finalizar Pedido</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    
+    
 
+    
+   <div id="popup7" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="window.location.href='#'">&times;</span>
+        <h2>FORMA DE PAGAMENTO</h2>
+        <form id="payment-form">
+            <div class="option">
+                <input type="radio" id="card" name="payment" value="card" required>
+                <label for="card">Cartão de Crédito</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="picpay" name="payment" value="picpay">
+                <label for="picpay">PicPay</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="pix" name="payment" value="pix">
+                <label for="pix">Pix</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Dinheiro</label>
+            </div>
+            
+            <div class="form-group">
+                <label for="amount">Valor : </label>
+                <input type="text" id="amount" name="amount" placeholder="R$0,00" required>
+            </div>
+            <div class="popup-buttons">
+                <a href="#popup6" class="prev">Anterior</a>
+                <a href="#popup1" class="next">Próximo</a>
+                <a href="#finalizarPedido">Finalizar Pedido</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+    
+    
+    
     <!-- ... outros pop-ups semelhantes ... -->
 
     <div class="container">
@@ -418,7 +518,7 @@
             <div class="popup-buttons">
                 <a href="#" id="copyBtn">Copiar Descrição</a>
                 <a href="#" id="clearBtn">Limpar Tudo</a>
-                <a href="#">Fechar</a>
+                <a href="#" id="whatsappBtn">Enviar pelo WhatsApp</a>
             </div>
         </div>
     </div>
@@ -430,7 +530,7 @@
             let selected = [];
             options.forEach(option => {
                 if (option.checked) {
-                    selected.push(option.nextElementSibling.textContent);
+                    selected.push(option.nextElementSibling.textContent.trim());
                 }
             });
             return selected;
@@ -461,11 +561,23 @@
             showSelectedOptions();
         }
 
+        // Função para enviar a mensagem via WhatsApp
+        function sendToWhatsApp() {
+            const selectedOptions = getSelectedOptions().join('\n');
+            const message = encodeURIComponent('Opções Selecionadas:\n' + selectedOptions);
+            const phoneNumber = '27999101211'; // Número de telefone
+            const url = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(url, '_blank');
+        }
+
         document.getElementById('copyBtn').addEventListener('click', copyToClipboard);
         document.getElementById('clearBtn').addEventListener('click', clearAllOptions);
 
         // Atualiza a lista de opções selecionadas ao abrir o pop-up de finalizar pedido
         document.querySelector('a[href="#finalizarPedido"]').addEventListener('click', showSelectedOptions);
+        
+        // Adiciona o evento para o botão de WhatsApp
+        document.getElementById('whatsappBtn').addEventListener('click', sendToWhatsApp);
     </script>
 </body>
 </html>
