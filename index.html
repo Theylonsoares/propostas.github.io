@@ -35,19 +35,20 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             
         }
-        .block:nth-child(2) { background-color: #FF5733; }
-        .block:nth-child(3) { background-color: #FF33A1; }
-        .block:nth-child(4) { background-color: #000000; }
-        .block:nth-child(5) { background-color: #33FF57; }
-        .block:nth-child(6) { background-color: #FF8F33; }
-        .block:nth-child(7) { background-color: #959b91; }
-        .block:nth-child(8) { background-color: #8F33FF; }
-        .block:nth-child(9) { background-color: #fad400; }
-        .block:nth-child(10) { background-color: #00aff5; }
-        .block:nth-child(11) { background-color: #09d676; }
-        .block:nth-child(12) { background-color: #ff8f33; }
-        .block:nth-child(13) { background-color: #ff0d0d; }
-        .block:nth-child(14) { background-color: #33FF57; }
+        .block:nth-child(2) { background-color: #33FF57; }
+        .block:nth-child(3) { background-color: #FF5733; }
+        .block:nth-child(4) { background-color: #FF33A1; }
+        .block:nth-child(5) { background-color: #000000; }
+        .block:nth-child(6) { background-color: #17922e; }
+        .block:nth-child(7) { background-color: #FF8F33; }
+        .block:nth-child(8) { background-color: #959b91; }
+        .block:nth-child(9) { background-color: #8F33FF; }
+        .block:nth-child(10) { background-color: #fad400; }
+        .block:nth-child(11) { background-color: #00aff5; }
+        .block:nth-child(12) { background-color: #09d676; }
+        .block:nth-child(13) { background-color: #ff8f33; }
+        .block:nth-child(14) { background-color: #ffffff; }
+        
 
 
         .block:hover, .image-block:hover {
@@ -56,7 +57,7 @@
         }
 
         .image-block {
-            background-image: url(Contatos\ .png); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
+            background-image: url(img.principal.svg); /* Substitua 'sua-imagem.jpg' pelo caminho da sua imagem */
             background-size: cover;
             background-position: center;
             height: 150px; /* Altura aumentada */
@@ -74,7 +75,6 @@
             justify-content: center;
             align-items: center;
         }
-        
 
         .popup-content {
             background: white;
@@ -131,8 +131,6 @@
             display: flex;
         }
 
-       
-
         /* Responsivo */
         @media (max-width: 600px) {
             .block, .image-block {
@@ -155,6 +153,7 @@
 <body>
     <div class="container">
         <a href= "https://meuairgo.com.br/theylonsoares" class="image-block" ></a>
+        <a href="#popup0" class="block">DECLARAR APOIO!</a>
         <a href="#popup1" class="block">SAÚDE</a>
         <a href="#popup2" class="block">MISSÃO MULHER</a>
         <a href="#popup3" class="block">SEGURANÇA</a>
@@ -166,7 +165,7 @@
         <a href="#popup9" class="block">TRANSPORTE POR APLICATIVO</a>
         <a href="#popup10" class="block">DESENVOLVIMENTO SOCIAL</a>
         <a href="#popup11" class="block">DESENVOLVIMENTO ECONÔMICO</a>
-       <a href="#popup12" class="block">DECLARAR APOIO!</a>
+       
        <!--  <a href="#popup13" class="block">Bloco 13</a>-->
     </div>
 
@@ -182,7 +181,7 @@
             <p><strong>(6)</strong> Implantação da Telemedicina</p>
         </p>
             <div class="popup-buttons">
-                <a href="#popup13">Anterior</a>
+                <a href="#popup0">Anterior</a>
                 <a href="#popup2">Próximo</a>
                 <a href="#">Fechar</a>
             </div>
@@ -347,17 +346,26 @@
         </div>
     </div>
 
-    <div id="popup12" class="popup">
+    <div id="popup0" class="popup">
         <div class="popup-content">
-            <h2>
-                <a href="https://theylonsoares25123.github.io/" style="text-decoration: none; color: inherit;">
-                    CLIQUE AQUI!
+            <h2>DECLARAR APOIO!</h2>
+            <p>Acessar o link: 
+                <a href="https://api.whatsapp.com/send?phone=5527999101211&text=Declaro%20apoio!!%20Me%20lembre%20na%20semana%20da%20vota%C3%A7%C3%A3o!">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:60px; height:60px; display: inline-block; vertical-align: middle;">
                 </a>
-            </h2>
+            </p>
+            <div class="popup-buttons">
+                <a href="#popup11">Anterior</a>
+                <a href="#popup1">Próximo</a>
+                <a href="#">Fechar</a>
+            </div>
         </div>
     </div>
     
-<!-- DESATIVADO >>>> 
+    
+    
+
+<!-- DESATIVADO >>>>
     <div id="popup13" class="popup">
         <div class="popup-content">
             <h2>Bloco 13</h2>
